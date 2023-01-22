@@ -10,6 +10,8 @@ import 'package:trip_prague/app/utils/hooks.dart';
 import 'package:trip_prague/core/domain/bloc/trip_prague/trip_prague_bloc.dart';
 import 'package:trip_prague/core/presentation/screens/error_screen.dart';
 import 'package:trip_prague/core/presentation/screens/loading_screen.dart';
+import 'package:trip_prague/features/day1/data/models/Day1Routine.dart';
+import 'package:trip_prague/features/day1/presentation/widgets/routine_widget.dart';
 
 class Day1Screen extends HookWidget {
   const Day1Screen({super.key});
@@ -42,6 +44,10 @@ class Day1Screen extends HookWidget {
                 Text(
                   context.l10n.profile__header_text__basic_information,
                   style: AppTextStyle.headline4,
+                ),
+                VSpace(Insets.lg),
+                RoutineOfDay(
+                  routines: Day1Routines.routines,
                 ),
               ],
             ),

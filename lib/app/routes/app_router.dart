@@ -39,6 +39,7 @@ class AppRouter {
     final String loginPath = RouteName.login.path;
     final String initialPath = RouteName.initial.path;
     final String homePath = RouteName.home.path;
+    final String day1 = RouteName.day1.path;
 
     // Check if app is still initializing
     if (tripPragueState.authStatus == AuthStatus.unknown) {
@@ -57,7 +58,7 @@ class AppRouter {
     }
     // Go to home screen if the app is authenticated but tries to go to login screen or is still in the splash screen.
     else if (authenticated && (isLoginScreen || isSplashScreen)) {
-      return homePath;
+      return day1;
     }
 
     return null;
