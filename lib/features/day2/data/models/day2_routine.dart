@@ -4,9 +4,15 @@ class Day2Routines {
   static final List<IRoutine> routines = [
     DailyRoutine.fromBlock(
       '''
-Prague Main Station, Wilsonova, Prague 2-Vinohrady, Czechia
-            https://goo.gl/maps/EMJe1vRAaQ45NS4U9
-            Prague Main Station Praha hl.n.''',
+Prague Castle, Hradčany, Prague 1, Czechia
+https://goo.gl/maps/FoRJmofWZzb72Jqj6
+''',
+    ),
+    DailyRoutine.fromBlock(
+      '''
+Petrin Tower, Petřínské sady, Prague 1-Malá Strana, Czechia
+https://goo.gl/maps/TXx3F2cGkQnqDFKr9
+''',
     ),
     DailyRoutine(
       title: 'Hotel Don Giovanni Prague, Vinohradská, Prague 3-Žižkov, Czechia',
