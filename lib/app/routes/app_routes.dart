@@ -6,6 +6,9 @@ import 'package:trip_prague/app/utils/transition_page_utils.dart';
 import 'package:trip_prague/core/presentation/screens/trip_prague_screen.dart';
 import 'package:trip_prague/core/presentation/screens/splash_screen.dart';
 import 'package:trip_prague/features/auth/presentation/screen/login_screen.dart';
+import 'package:trip_prague/features/day1/presentation/pages/day1_screen.dart';
+import 'package:trip_prague/features/day2/presentation/pages/day2_screen.dart';
+import 'package:trip_prague/features/day3/presentation/pages/day3_screen.dart';
 import 'package:trip_prague/features/home/domain/model/post.dart';
 import 'package:trip_prague/features/home/presentation/screens/home_screen.dart';
 import 'package:trip_prague/features/home/presentation/screens/post_details_webview.dart';
@@ -70,6 +73,33 @@ class AppRoutes {
                   FadeTransitionPage(
                 key: scaffoldKey,
                 child: const ProfileScreen(),
+              ),
+            ),
+            GoRoute(
+              path: RouteName.day1.path,
+              name: RouteName.day1.name,
+              pageBuilder: (BuildContext context, GoRouterState state) =>
+                  FadeTransitionPage(
+                key: scaffoldKey,
+                child: const Day1Screen(),
+              ),
+            ),
+            GoRoute(
+              path: RouteName.day2.path,
+              name: RouteName.day2.name,
+              pageBuilder: (BuildContext context, GoRouterState state) =>
+                  FadeTransitionPage(
+                key: scaffoldKey,
+                child: const Day2Screen(),
+              ),
+            ),
+            GoRoute(
+              path: RouteName.day3.path,
+              name: RouteName.day3.name,
+              pageBuilder: (BuildContext context, GoRouterState state) =>
+                  FadeTransitionPage(
+                key: scaffoldKey,
+                child: const Day3Screen(),
               ),
             ),
           ],

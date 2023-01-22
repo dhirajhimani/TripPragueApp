@@ -6,7 +6,6 @@ import 'package:trip_prague/app/utils/error_message_utils.dart';
 import 'package:trip_prague/app/utils/injection.dart';
 import 'package:trip_prague/core/domain/bloc/trip_prague/trip_prague_bloc.dart';
 import 'package:trip_prague/core/presentation/screens/error_screen.dart';
-import 'package:trip_prague/core/presentation/screens/loading_screen.dart';
 import 'package:trip_prague/core/presentation/widgets/connectivity_checker.dart';
 import 'package:trip_prague/core/presentation/widgets/trip_prague_app_bar.dart';
 import 'package:trip_prague/core/presentation/widgets/trip_prague_nav_bar.dart';
@@ -36,15 +35,13 @@ class TripPragueScreen extends StatelessWidget {
                   errorMessage:
                       ErrorMessageUtils.generate(context, state.failure),
                 );
-              } else if (state.user != null) {
+              } else {
                 return ConnectivityChecker(
                   child: Scaffold(
                     appBar: PreferredSize(
                       preferredSize:
                           Size.fromHeight(AppBar().preferredSize.height),
-                      child: TripPragueAppBar(
-                        avatar: state.user!.avatar,
-                      ),
+                      child: TripPragueAppBar(),
                     ),
                     body: SafeArea(
                       child: Center(
@@ -59,9 +56,10 @@ class TripPragueScreen extends StatelessWidget {
                     bottomNavigationBar: const TripPragueNavBar(),
                   ),
                 );
-              } else {
-                return LoadingScreen.scaffold();
               }
+              // else {
+              //   return LoadingScreen.scaffold();
+              // }
             },
           ),
         ),

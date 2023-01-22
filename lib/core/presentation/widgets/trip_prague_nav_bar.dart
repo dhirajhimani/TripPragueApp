@@ -15,12 +15,14 @@ class TripPragueNavBar extends StatelessWidget {
         child: BottomNavigationBar(
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: const Icon(Icons.home),
-              label: AppLocalizations.of(context).common_home.capitalize(),
-            ),
-            BottomNavigationBarItem(
-              icon: const Icon(Icons.person),
-              label: AppLocalizations.of(context).common_profile.capitalize(),
+              icon: const Icon(Icons.travel_explore),
+              label: AppLocalizations.of(context).common_day1.capitalize(),
+            ),BottomNavigationBarItem(
+              icon: const Icon(Icons.beach_access),
+              label: AppLocalizations.of(context).common_day2.capitalize(),
+            ),BottomNavigationBarItem(
+              icon: const Icon(Icons.done_all),
+              label: AppLocalizations.of(context).common_day3.capitalize(),
             ),
           ],
           currentIndex: _getSelectedIndex(context),
@@ -30,11 +32,14 @@ class TripPragueNavBar extends StatelessWidget {
 
   int _getSelectedIndex(BuildContext context) {
     final String location = GoRouter.of(context).location;
-    if (location.startsWith(RouteName.home.path)) {
+    if (location.startsWith(RouteName.day1.path)) {
       return 0;
     }
-    if (location.startsWith(RouteName.profile.path)) {
+    if (location.startsWith(RouteName.day2.path)) {
       return 1;
+    }
+    if (location.startsWith(RouteName.day3.path)) {
+      return 2;
     }
 
     return 0;
@@ -43,13 +48,16 @@ class TripPragueNavBar extends StatelessWidget {
   void _onItemTapped(int index, BuildContext context) {
     switch (index) {
       case 0:
-        GoRouter.of(context).goNamed(RouteName.home.name);
+        GoRouter.of(context).goNamed(RouteName.day1.name);
         break;
       case 1:
-        GoRouter.of(context).goNamed(RouteName.profile.name);
+        GoRouter.of(context).goNamed(RouteName.day2.name);
+        break;
+      case 2:
+        GoRouter.of(context).goNamed(RouteName.day3.name);
         break;
       default:
-        GoRouter.of(context).goNamed(RouteName.home.name);
+        GoRouter.of(context).goNamed(RouteName.day1.name);
     }
   }
 }

@@ -29,6 +29,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "common_day1": MessageLookupByLibrary.simpleMessage("Sunday"),
+        "common_day2": MessageLookupByLibrary.simpleMessage("Monday"),
+        "common_day3": MessageLookupByLibrary.simpleMessage("Tuesday"),
         "common_error_email_format":
             MessageLookupByLibrary.simpleMessage("Invalid email format"),
         "common_error_empty_string": m0,

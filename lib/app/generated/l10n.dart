@@ -130,6 +130,36 @@ class AppLocalizations {
     );
   }
 
+  /// `Sunday`
+  String get common_day1 {
+    return Intl.message(
+      'Sunday',
+      name: 'common_day1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monday`
+  String get common_day2 {
+    return Intl.message(
+      'Monday',
+      name: 'common_day2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tuesday`
+  String get common_day3 {
+    return Intl.message(
+      'Tuesday',
+      name: 'common_day3',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `home`
   String get common_home {
     return Intl.message(
