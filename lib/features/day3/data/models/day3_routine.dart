@@ -15,6 +15,7 @@ EC 378, 3 Sitzplätze, Wg. 258,
 Pl. 84 85 86, 2 Fenster, 1 Mitte,
             ''',
     ),
+
     DailyRoutine(
       title: 'Hotel Don Giovanni Prague, Vinohradská, Prague 3-Žižkov, Czechia',
       description: 'Where we are going to stay',

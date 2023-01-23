@@ -26,16 +26,16 @@ Lunch Option 1
     ),
     DailyRoutine.fromBlock(
       '''
-Dancing House, Jiráskovo nám. 1981/6, 120 00 Nové Město, Czechia
-https://goo.gl/maps/phkeRYXvF5Tgj75o8
-walk after Lunch
+Black Bettie's Grill
+https://goo.gl/maps/PDPdiq5MRtAa8MP87
+Lunch Option 2
             ''',
     ),
     DailyRoutine.fromBlock(
       '''
-Black Bettie's Grill
-https://goo.gl/maps/PDPdiq5MRtAa8MP87
-Lunch Option 2
+Dancing House, Jiráskovo nám. 1981/6, 120 00 Nové Město, Czechia
+https://goo.gl/maps/phkeRYXvF5Tgj75o8
+walk after Lunch
             ''',
     ),
     DailyRoutine(
@@ -43,20 +43,17 @@ Lunch Option 2
       description: 'Where we are going to stay',
       url: 'https://goo.gl/maps/majvzTM6xqRHJFMU6',
     ),
-
     DailyRoutine.fromBlock(
       '''
       Old Town Square, Staroměstské nám., 110 00 Josefov, Czechia
             ''',
     ),
-
     DailyRoutine.fromBlock(
       '''
       Můstek, 110 00 Prague 1, Czechia
   https://goo.gl/maps/614XZUccdbNNJ5678
             ''',
     ),
-
     DailyRoutine.fromBlock(
       '''
       Franz Kafka - Rotating Head, Charvátova, 110 00 Nové Město, Czechia
@@ -93,7 +90,6 @@ Lunch Option 2
   https://goo.gl/maps/TZvGJ38TpQHvdsqRA
             ''',
     ),
-
     DailyRoutine(
       title: 'Hotel Don Giovanni Prague, Vinohradská, Prague 3-Žižkov, Czechia',
       description: 'Where we are going to stay',
