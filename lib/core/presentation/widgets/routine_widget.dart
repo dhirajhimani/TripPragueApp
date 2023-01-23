@@ -34,7 +34,7 @@ class _RoutineOfDayState extends State<RoutineOfDay> {
                 widget.routines[index].description ?? '',
                 style: AppTextStyle.headline5,
               ),
-              trailing: const Icon(Icons.map),
+              trailing: const Icon(Icons.location_on),
               onTap: () => launchUrl(
                   mode:LaunchMode.externalApplication,
                 Uri.parse(widget.routines[index].url ?? ''),
