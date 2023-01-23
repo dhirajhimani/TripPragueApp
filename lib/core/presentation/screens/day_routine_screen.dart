@@ -33,26 +33,21 @@ class DayRoutineScreen extends HookWidget {
           );
         }
 
-        return SmartRefresher(
-          controller: refreshController,
-          header: const ClassicHeader(),
-          onRefresh: () async => context.read<TripPragueBloc>().getUser(),
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: Insets.xl),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                VSpace(Insets.lg),
-                Text(
-                  context.l10n.profile__header_text__basic_information,
-                  style: AppTextStyle.headline4,
-                ),
-                VSpace(Insets.lg),
-                RoutineOfDay(
-                  routines: routines,
-                ),
-              ],
-            ),
+        return Padding(
+          padding: EdgeInsets.symmetric(horizontal: Insets.xl),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              VSpace(Insets.lg),
+              Text(
+                context.l10n.profile__header_text__basic_information,
+                style: AppTextStyle.headline4,
+              ),
+              VSpace(Insets.lg),
+              RoutineOfDay(
+                routines: routines,
+              ),
+            ],
           ),
         );
       },

@@ -36,25 +36,23 @@ class TripPragueScreen extends StatelessWidget {
                       ErrorMessageUtils.generate(context, state.failure),
                 );
               } else {
-                return ConnectivityChecker(
-                  child: Scaffold(
-                    appBar: PreferredSize(
-                      preferredSize:
-                          Size.fromHeight(AppBar().preferredSize.height),
-                      child: TripPragueAppBar(),
-                    ),
-                    body: SafeArea(
-                      child: Center(
-                        child: ConstrainedBox(
-                          constraints: const BoxConstraints(
-                            maxWidth: Constant.mobileBreakpoint,
-                          ),
-                          child: child,
+                return Scaffold(
+                  appBar: PreferredSize(
+                    preferredSize:
+                        Size.fromHeight(AppBar().preferredSize.height),
+                    child: TripPragueAppBar(),
+                  ),
+                  body: SafeArea(
+                    child: Center(
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(
+                          maxWidth: Constant.mobileBreakpoint,
                         ),
+                        child: child,
                       ),
                     ),
-                    bottomNavigationBar: const TripPragueNavBar(),
                   ),
+                  bottomNavigationBar: const TripPragueNavBar(),
                 );
               }
               // else {
